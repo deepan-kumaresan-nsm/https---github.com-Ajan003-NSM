@@ -1,0 +1,18 @@
+<h2>Properties</h2>
+
+<ul class="heroes">
+  <li *ngFor="let property of properties" (click)="onSelect(property)" [class.selected]="property === selectedProperty">
+    <span class="hero-element">
+      <span class="badge">{{property.id}}</span> {{property.name}}
+    </span>
+  </li>
+</ul>
+
+
+<div *ngIf="selectedProperty" class="module hero">
+  <h2>
+    {{selectedProperty.name}}
+  </h2>
+  <h3>Borrower Name: {{selectedProperty.borrower}}</h3>
+  <h3>Number of Loans: {{selectedProperty.loans}}</h3>
+</div>

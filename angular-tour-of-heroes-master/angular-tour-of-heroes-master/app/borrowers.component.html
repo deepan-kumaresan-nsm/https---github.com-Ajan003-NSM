@@ -1,0 +1,16 @@
+ <h2>Borrowers</h2>
+
+<ul class="heroes">
+  <li *ngFor="let borrower of borrowers" (click)="onSelect(borrower)" [class.selected]="borrower === selectedBorrower">
+    <span class="hero-element">
+      <span class="badge">{{borrower.id}}</span> {{borrower.name}}
+    </span>
+  </li>
+</ul>    
+<div *ngIf="selectedBorrower" class="module hero">
+  <h2>
+    {{selectedBorrower.name}}
+  </h2>
+  <h3>Number of Loans: {{selectedBorrower.loans}}</h3>
+  <h3>Number of Properties: {{selectedBorrower.properties}}</h3>
+</div>

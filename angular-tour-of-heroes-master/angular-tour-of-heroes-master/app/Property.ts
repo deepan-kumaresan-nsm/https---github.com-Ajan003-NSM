@@ -1,0 +1,6 @@
+export class Property {
+  id: number;
+  name: string;
+  loans: string;;
+  borrower: String;
+}
